@@ -1,0 +1,67 @@
+$default-font: 'Oranienbaum', serif
+$pt-font: 'PT Root UI', sans-serif
+	
+$txt: #1C1C1C
+$accent: #DF3F3F
+$white: #fff
+
+@import '../libs/swiper/swiper-bundle.min.css'
+@import '../libs/select2/dist/css/select2.min.css'
+@import '../libs/lightgallery/dist/css/lightgallery.css'
+@import '../libs/lightgallery/dist/css/lg-zoom.css'
+@import '../libs/chart.js/Chart.min.css'
+
+@font-face
+	font-family: 'PT Root UI'
+	src: url(../fonts/PTRootUI/PTRootUI_Regular.otf) format("opentype")
+	font-weight: 400
+	font-style: normal
+
+@font-face
+	font-family: 'PT Root UI'
+	src: url(../fonts/PTRootUI/PTRootUI_Medium.otf) format("opentype")
+	font-weight: 500
+	font-style: normal
+
+
+*
+	-webkit-tap-highlight-color: transparent
+
+body
+	margin: 0
+	font-family: $default-font
+	color: $txt
+	background-color: #FFFFFF
+
+button
+	background-color: transparent
+	outline: none
+	border: 0
+	font-family: $pt-font
+	cursor: pointer
+
+ul
+	list-style-type: none
+	padding: 0
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+	-webkit-appearance: none
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus
+	appearance: none
+	-moz-appearance: textfield
+
+.hidden
+	width: 1px
+	height: 1px
+	position: absolute
+	left: -99999px
+	margin: -1px
+
+.swiper-button-prev, .swiper-button-next, .swiper-button-prev:active, .swiper-button-next:active, .swiper-button-prev:focus, .swiper-button-next:focus, .swiper-pagination-bullet, .swiper-pagination-bullet:active, .swiper-pagination-bullet:focus
+	outline: none!important
+
+

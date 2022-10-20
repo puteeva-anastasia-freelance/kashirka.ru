@@ -1,0 +1,119 @@
+.news
+	padding-top: 5.25%
+	padding-bottom: 5.21%
+
+	@media (max-width: 1200px)
+		padding-top: 8%
+		padding-bottom: 7.8%
+	
+	@media (max-width: 992px)
+		padding-top: 10.5%
+		padding-bottom: 10.5%
+	
+	@media (max-width: 576px)
+		padding-top: 60px
+		padding-bottom: 60px
+	
+	&__container
+		overflow: hidden
+
+	&__title
+		letter-spacing: normal
+	
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		margin-right: -32px
+		margin-top: 39.5px
+
+		@media (max-width: 1200px)
+			margin-top: 29px
+			margin-right: -24px
+		
+		@media (max-width: 992px)
+			margin-right: -20px
+		
+		@media (max-width: 576px)
+			margin-right: 0
+			margin-top: 30px
+	
+	&__item
+		margin-right: 32px
+		width: calc((100% - 96px) / 3)
+		text-decoration: none
+		color: inherit
+
+		@media (max-width: 1200px)
+			margin-right: 24px
+			width: calc((100% - 48px) / 2)
+		
+		@media (max-width: 992px)
+			margin-right: 20px
+			width: calc((100% - 40px) / 2)
+		
+		@media (max-width: 576px)
+			width: 100%
+			margin-right: 0
+			margin-bottom: 32px
+
+		&:last-child
+			@media (max-width: 1200px)
+				display: none
+
+		&:hover
+			.news__photo
+				transform: scale(1.1)
+	
+	&__photo
+		object-fit: cover
+		border-radius: 4px
+		width: 100%
+		height: 100%
+		transition: transform .3s ease-out
+	
+	&__img
+		width: 100%
+		overflow: hidden
+		height: 318px
+		margin-bottom: 21px
+		border-radius: 4px
+
+		@media (max-width: 1200px)
+			height: 351px
+		
+		@media (max-width: 992px)
+			height: 270px
+		
+		@media (max-width: 576px)
+			height: 255px
+			margin-bottom: 16px
+	
+	&__date
+		color: #6D7278
+		font-family: $pt-font
+		font-size: 14px
+		margin-top: 19px
+		display: block
+
+		@media (max-width: 1200px)
+			margin-top: 12px
+	
+	&__all
+		margin: 40.5px auto 0
+
+		@media (max-width: 1200px)
+			margin-top: 31px
+		
+		@media (max-width: 576px)
+			margin-top: -1px
+
+	&__txt
+		margin-top: 9px
+		margin-bottom: -1px
+
+		@media (max-width: 1200px)
+			margin-top: 6px
+			margin-bottom: 0
+	
+		@media (max-width: 576px)
+			margin-top: 8px
