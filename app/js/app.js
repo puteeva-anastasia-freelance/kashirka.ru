@@ -46,6 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		$liked.toggleClass('active');
 	});
 
+	//Переключение поселков
+
 	$('#card-all').addClass('show');
 
 	$('#tab-all').click(function () {
@@ -79,6 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.tab-t').removeClass('tab__active');
 		$('#tab-forest').addClass('tab__active');
 	});
+
+	//Переключение участков
 
 	$('#card-all-p').addClass('show');
 
@@ -145,6 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.tab-p').removeClass('tab__active');
 		$('#tab-favorable').addClass('tab__active');
 	});
+
+	//Переключение расположения
 	
 	$('#location-transport').addClass('show');
 
@@ -172,6 +178,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('#tab-sight').addClass('tab__active');
 	});
 
+	//Переключение хода строительства
+
 	$('#progress-1').addClass('show');
 
 	$('#tab-progress-1').click(function () {
@@ -196,6 +204,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		$('.progress__tab').removeClass('progress__tab_active');
 		$('#tab-progress-3').addClass('progress__tab_active');
+	});
+
+	//Переключение новостей
+
+	$('#all-projects').addClass('show');
+
+	$('#tab-all-projects').click(function () {
+		$('.news__wrap').removeClass('show');
+		$('#all-projects').addClass('show');
+
+		$('.news__tab').removeClass('tab__active');
+		$('#tab-all-projects').addClass('tab__active');
+	});
+
+	$('#tab-project-1').click(function () {
+		$('.news__wrap').removeClass('show');
+		$('#project-1').addClass('show');
+
+		$('.news__tab').removeClass('tab__active');
+		$('#tab-project-1').addClass('tab__active');
+	});
+
+	$('#tab-project-2').click(function () {
+		$('.news__wrap').removeClass('show');
+		$('#project-2').addClass('show');
+
+		$('.news__tab').removeClass('tab__active');
+		$('#tab-project-2').addClass('tab__active');
+	});
+
+	$('#tab-project-3').click(function () {
+		$('.news__wrap').removeClass('show');
+		$('#project-3').addClass('show');
+
+		$('.news__tab').removeClass('tab__active');
+		$('#tab-project-3').addClass('tab__active');
+	});
+
+	$('#tab-project-4').click(function () {
+		$('.news__wrap').removeClass('show');
+		$('#project-4').addClass('show');
+
+		$('.news__tab').removeClass('tab__active');
+		$('#tab-project-4').addClass('tab__active');
+	});
+
+	$('#tab-project-5').click(function () {
+		$('.news__wrap').removeClass('show');
+		$('#project-5').addClass('show');
+
+		$('.news__tab').removeClass('tab__active');
+		$('#tab-project-5').addClass('tab__active');
 	});
 
 	var aboutSwiper = new Swiper('#about-slider', {
@@ -240,6 +300,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		navigation: {
 			nextEl: '.tab__button-township-next',
 			prevEl: '.tab__button-township-prev',
+		},
+	})
+
+	var tabsSwiperNews = new Swiper('#tabs-slider-news', {
+		slidesPerView: 'auto',
+		watchSlidesProgress: true,
+		freeMode: true,
+		speed: 600,
+		navigation: {
+			nextEl: '.tab__button-news-next',
+			prevEl: '.tab__button-news-prev',
 		},
 	})
 
@@ -323,7 +394,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	})
 
-
 	$('.tab__button-next').click(function () {
 		tabsSwiper.slideTo(8, 800, true);
 	})
@@ -340,12 +410,24 @@ document.addEventListener('DOMContentLoaded', () => {
 		tabsSwiperTownship.slideTo(0, 800, true);
 	})
 
+	$('.tab__button-news-next').click(function () {
+		tabsSwiperNews.slideTo(8, 800, true);
+	})
+
+	$('.tab__button-news-prev').click(function () {
+		tabsSwiperNews.slideTo(0, 800, true);
+	})
+
 	if (!$('.tab__button-next').hasClass("swiper-button-disabled")) {
 		$('#tabs-slider .swiper-slide-visible:last').addClass('brighten');
 	}
 
 	if (!$('.tab__button-township-next').hasClass("swiper-button-disabled")) {
 		$('#tabs-slider-township .swiper-slide-visible:last').addClass('brighten');
+	}
+
+	if (!$('.tab__button-news-next').hasClass("swiper-button-disabled")) {
+		$('#tabs-slider-news .swiper-slide-visible:last').addClass('brighten');
 	}
 
 	var pagingTabs = function () {
@@ -384,6 +466,24 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 
+	var pagingTabsNews = function () {
+		if (!$('.tab__button-news-next').hasClass("swiper-button-disabled")) {
+			$('#tabs-slider-news .swiper-slide').removeClass('brighten');
+			$('#tabs-slider-news .swiper-slide-visible:last').addClass('brighten');
+		}
+
+		if (!$('.tab__button-news-prev').hasClass("swiper-button-disabled")) {
+			$('#tabs-slider-news .swiper-slide').removeClass('brighten');
+			$('#tabs-slider-news .swiper-slide-visible:first').addClass('brighten');
+		}
+
+		if (!$('.tab__button-news-prev').hasClass("swiper-button-disabled") && !$('.tab__button-news-next').hasClass("swiper-button-disabled")) {
+			$('#tabs-slider-news .swiper-slide').removeClass('brighten');
+			$('#tabs-slider-news .swiper-slide-visible:first').addClass('brighten');
+			$('#tabs-slider-news .swiper-slide-visible:last').addClass('brighten');
+		}
+	}
+
 	$('#tabs-slider .swiper-button').on('click', function () {
 		pagingTabs();
 	})
@@ -414,6 +514,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	tabsSwiperTownship.on('slideChangeTransitionEnd', function () {
 		pagingTabsTownship();
+	})
+
+	$('#tabs-slider-news .swiper-button').on('click', function () {
+		pagingTabsNews();
+	})
+
+	tabsSwiperNews.on('touchMove', function () {
+		pagingTabsNews();
+	})
+
+	tabsSwiperNews.on('slideChange', function () {
+		pagingTabsNews();
+	})
+
+	tabsSwiperNews.on('slideChangeTransitionEnd', function () {
+		pagingTabsNews();
 	})
 
 	var mlAbout = $('.container').css('margin-left');
@@ -450,6 +566,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	$('.reviews__more').click(function(){
 		$('.reviews__item').show();
 		$('.reviews__more').hide();
+	})
+
+	$('.news__more').click(function(){
+		$('.news__item').show();
+		$('.news__more').hide();
 	})
 
 	$('.main-header__menu-button').click(function () {
