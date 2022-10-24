@@ -583,6 +583,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.main-header__menu-left').toggleClass('active');
 	});
 
+	$('.pop-up__overlay').click(function () {
+		$('.pop-up__overlay').hide();
+		$('.main-header__menu-left').toggleClass('active');
+	});
+
 	$('.card__more').click(function () {
 		$('.card__inner').css('display', 'flex');
 		$('.card__more').hide();
@@ -659,6 +664,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	var dynamicsCanvas = $("#dynamicsChart");
 	var ctx = document.getElementById("dynamicsChart").getContext("2d");
+	Chart.defaults.global.defaultFontFamily = "'PT Root UI', sans-serif";
 
 	if($(window).width() <= 1200)
 		ctx.canvas.height = 363;
@@ -702,7 +708,6 @@ document.addEventListener('DOMContentLoaded', () => {
 						autoSkip: false,
 						fontSize: 13,
 						fontColor: "#757575",
-						family: "'PT Root UI', sans-serif",
 						padding: 6,
 						maxRotation: 0,
 						minRotation: 0
@@ -717,7 +722,6 @@ document.addEventListener('DOMContentLoaded', () => {
 						fontColor: "#757575",
 						stepSize: 50000,
 						padding: 11,
-						family: "'PT Root UI', sans-serif",
 						callback: function (value, index, values) {
 							if (parseInt(value) >= 1000) {
 								return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
@@ -754,4 +758,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	if($(window).width() <= 349)
 		lineChart.options.scales.xAxes[0].ticks.minor.fontSize = 8.5;
+	
 })

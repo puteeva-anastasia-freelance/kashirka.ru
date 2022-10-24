@@ -19,6 +19,9 @@
 		&:first-child
 			margin-top: 1px
 
+			&::after
+				top: 5px
+
 		&::after
 			content: ''
 			display: block
@@ -27,9 +30,11 @@
 			width: 4px
 			height: 7px
 			right: 12px
-			top: 27%
+			top: 6px
 		
 		&:last-child
+			padding: 0
+			
 			&::after
 				display: none
 		
