@@ -578,7 +578,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.pop-up__overlay, .pop-up').hide();
 	})
 
-	$('.main-footer__write').click(function () {
+	$('.button__write').click(function () {
 		var popup_id = $('#' + $(this).attr("rel"));
 		$(popup_id).show();
 		$('.pop-up__overlay').show();
