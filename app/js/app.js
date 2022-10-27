@@ -567,7 +567,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	$('.photo-swiper-button-next').css('right', mlAbout);
 	$('.photo-swiper-button-prev').css('left', mlAbout);
 
-	$('.input__tel').mask('+9999999999?99');
+	$('.input__tel').mask('+7 (999) 999-99-99');
 
 	$('.employee__item').click(function () {
 		var popup_id = $('#' + $(this).attr("rel"));
@@ -647,16 +647,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	$('#sorting').select2();
-
-	$(document).on("mouseenter", ".select2-container", function (e) {
-		$(this).prev('select').select2("open");
-	});
-
-	$(document).on("mouseleave", ".select2-container", function (e) {
-		if ($(e.toElement || e.relatedTarget).closest(".select2-container").length == 0) {
-			$('select').select2("close");
-		}
-	});
 
 	$('#location-select').select2();
 

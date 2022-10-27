@@ -178,3 +178,19 @@
 		@media (max-width: 550px)
 			width: 100%
 			margin-bottom: 2px
+	
+	&__logo
+		&-icon
+			fill: $txt
+
+			&-top, &-bottom
+				transition: fill .2s ease-in-out
+
+		&:hover
+			.main-footer__logo-icon-top
+				fill: $accent
+				
+			.main-footer__logo-icon-bottom
+				fill: #c33636
+			
+			
