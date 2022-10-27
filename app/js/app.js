@@ -646,9 +646,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		$card.removeClass('active');
 	});
 
-	$('#sorting').select2({
-		border: "none"
-	});
+	$('#sorting').select2();
 
 	$('#location-select').select2();
 
