@@ -212,10 +212,7 @@ h1, h2, h3, h4, h5, h6
 
 	&:hover
 		.policy__label::before
-			outline: 2px solid $accent
-			background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.76189 1.42871L3.09523 5.09538L1.42856 3.42871' stroke='#DF3F3F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
-			background-repeat: no-repeat
-			background-position: center
+			transform: scale(1.1)
 
 	&__label
 		padding-left: 34px
@@ -234,6 +231,7 @@ h1, h2, h3, h4, h5, h6
 			position: absolute
 			left: 0
 			top: 3px
+			transition: transform .2s ease-in-out
 	
 	&__link
 		color: inherit
