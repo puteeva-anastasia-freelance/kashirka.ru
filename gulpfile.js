@@ -26,6 +26,7 @@ import changed       from 'gulp-changed'
 import concat        from 'gulp-concat'
 import rsync         from 'gulp-rsync'
 import del           from 'del'
+import uglify        from 'gulp-uglify'
 
 function browsersync() {
 	browserSync.init({
