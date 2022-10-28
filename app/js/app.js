@@ -27,9 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	checkWidth();
 
-	$(window).scroll(function (event) {
-		let heightFirst = ($('.first').outerHeight() + $('.main-header').outerHeight() - $(window).height());
-		if ($(this).scrollTop() > heightFirst) {
+	$(window).scroll(function () {
+		if ($(window).scrollTop() > ($('.first').outerHeight() + $('.main-header').outerHeight() - $(window).height())) {
 			$('.first__down').addClass('show');
 		} else
 			$('.first__down').removeClass('show');
