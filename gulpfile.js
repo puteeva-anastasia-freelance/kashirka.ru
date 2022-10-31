@@ -93,7 +93,8 @@ function buildcopy() {
 		'app/libs/lightgallery/dist/fonts/**/*',
 		'app/libs/lightgallery/dist/images/**/*',
 		'app/libs/chart.js/Chart.min.css',
-		'app/js/appChart.js'
+		'app/js/appChart.js',
+		'app/js/appMap.js'
 	], { base: 'app/' })
 	.pipe(dest('dist'))
 }

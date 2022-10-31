@@ -70,13 +70,9 @@
 		position: relative
 		background-color: $white
 		border-radius: 0px 0px 4px 4px
-		height: 270px
 
-		@media (max-width: 1200px)
-			height: 220px
-		
-		@media (max-width: 992px)
-			height: 301px
+		@media (max-width: 576px)
+			height: auto!important
 
 		&::after
 			content: ''
@@ -117,21 +113,10 @@
 		line-height: 172%
 		color: #040404
 		padding: 30px
-		height: 175px
 		margin: 0
-		-webkit-line-clamp: 7
-		display: -webkit-box
-		-webkit-box-orient: vertical
-		overflow: hidden
 		
 		@media (max-width: 1200px)
-			-webkit-line-clamp: 6
 			padding: 20px
-			height: 160px
-		
-		@media (max-width: 992px)
-			-webkit-line-clamp: 9
-			height: 250px
 		
 		@media (max-width: 576px)
 			padding-left: 15px

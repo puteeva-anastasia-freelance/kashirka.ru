@@ -1,0 +1,121 @@
+.map
+	&__wrap
+		width: 100%
+		height: 700px
+	
+	&__label
+		&-sign
+			padding: 5px 10px
+			background-color: $white
+			box-shadow: 0px 5px 15px rgba(139, 154, 173, 0.15)
+			border-radius: 4px
+			font-family: $pt-font
+			font-size: 14px
+			color: $txt
+			letter-spacing: normal
+			display: flex
+			align-items: center
+			top: 10px
+			position: absolute
+			top: -44px
+			left: -10%
+			cursor: pointer
+		
+		&-sum
+			background-color: $txt
+			width: 24px
+			height: 24px
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 50%
+			color: $white
+			font-size: 12px
+			margin-right: 6px
+
+	.customControl
+		display: none
+		background-color: $white
+		width: 340px
+		position: relative
+
+	.closeButton
+		padding: 3px
+		height: 15px
+		cursor: pointer
+		position: absolute
+		left: -50px
+		width: 40px
+		height: 40px
+		background-color: $white
+		box-shadow: 0px 5px 15px rgba(139, 154, 173, 0.15)
+		border-radius: 50%
+		display: flex
+		align-items: center
+		justify-content: center
+
+		&-icon
+			stroke: #6D7278
+			transition: stroke .2s ease-in-out
+
+		&:hover
+			.closeButton-icon
+				stroke: $txt
+
+	.content
+		width: 100%
+
+		&__inner
+			width: 100%
+			height: 255px
+			border-radius: 4px 4px 0 0
+			display: flex
+			align-items: flex-end
+		
+		&__liked
+			position: absolute
+			right: 11px
+			top: 16px
+		
+		&__top
+			color: $white
+			padding: 15px
+		
+		&__name
+			font-size: 24px
+		
+		&__price
+			font-size: 16px
+
+			&_old
+				text-decoration: line-through
+				margin-right: 10px
+			
+			&_big
+				font-size: 26px
+		
+		&__distance
+			font-family: $pt-font
+			font-size: 16px
+		
+		&__bottom
+			padding: 20px
+		
+		&__quantity
+			font-family: $pt-font
+			font-size: 16px
+			margin-bottom: 20px
+			display: block
+
+			b
+				font-weight: 500
+		
+		&__more
+			width: 100%
+
+input[type="checkbox"]
+	appearance: auto
+
+.ymaps-2-1-79-svg-icon
+	background-image: url(../assets/img/dist/map-ellipse.svg)!important
+	width: 300px
