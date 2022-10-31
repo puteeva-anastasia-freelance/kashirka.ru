@@ -743,11 +743,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	});
 
-	var maxHeight = Math.max.apply(null, $(".reviews__bottom").map(function () {
+	/*var maxHeight = Math.max.apply(null, $(".reviews__bottom").map(function () {
 		return $(this).height();
 	}).get());
 
-	$('.reviews__bottom').css('height', maxHeight); 
+	$('.reviews__bottom').css('height', maxHeight); */
 
 /*	$(".reviews__bottom").each(function() {
 		let text = $(this).find(".reviews__desc"); //находим блок span внутри блока родителя
