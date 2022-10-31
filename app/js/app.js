@@ -752,4 +752,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	});
 
+	var maxHeight = Math.max.apply(null, $(".reviews__bottom").map(function () {
+		return $(this).height();
+	}).get());
+	$('.reviews__bottom').css('height', maxHeight);
+
 })
