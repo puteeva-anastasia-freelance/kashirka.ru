@@ -5,7 +5,7 @@ ymaps.ready(['Panel']).then(function () {
 		controls: []
 	});
 	// Создадим контент для меток.
-	var firstOffice = '<div class="content__inner" style="background: center / cover no-repeat url(../assets/img/dist/township-1.jpg);">' +
+	var firstOffice = '<div class="content__inner" style="background: center / cover no-repeat url(assets/img/dist/township-1.jpg);">' +
 		'<button type="button" class="liked content__liked"><svg width="28" height="23" viewBox="0 0 28 23" xmlns="http://www.w3.org/2000/svg" class="liked__icon"><path d="M24.3473 2.78577C23.7271 2.16522 22.9906 1.67295 22.1801 1.33709C21.3695 1.00124 20.5007 0.828369 19.6233 0.828369C18.7459 0.828369 17.8771 1.00124 17.0666 1.33709C16.256 1.67295 15.5196 2.16522 14.8993 2.78577L13.612 4.07303L12.3248 2.78577C11.0719 1.53288 9.3726 0.829019 7.60075 0.829019C5.8289 0.829019 4.12962 1.53288 2.87673 2.78577C1.62385 4.03866 0.919983 5.73794 0.919983 7.50979C0.919983 9.28164 1.62385 10.9809 2.87673 12.2338L4.164 13.5211L13.612 21.8651L23.0601 13.5211L24.3473 12.2338C24.9679 11.6135 25.4601 10.8771 25.796 10.0665C26.1319 9.25597 26.3047 8.38717 26.3047 7.50979C26.3047 6.6324 26.1319 5.7636 25.796 4.95304C25.4601 4.14248 24.9679 3.40603 24.3473 2.78577Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></button>' +
 		'<div class="content__top">' +
 		'<h2 class="content__name">Лесные берега</h2>' +
