@@ -39,19 +39,14 @@ ymaps.ready(['Panel']).then(function () {
 	var collection = new ymaps.GeoObjectCollection(null, {
 		// Запретим появление балуна.
 		hasBalloon: false,
-		iconColor: '#DF3F3F',
-		fillColor: "0066ff99",
-		fill: "0066ff99",
-		fillOpacity: '0.5'
 	});
 	// Добавим геообъекты в коллекцию.
 	collection
 		.add(new ymaps.Placemark([56.370077, 34.774790], {
 			iconContent: '<span class="map__label-sign"><span class="map__label-sum">37</span>Озерный</span>',
 			balloonContent: firstOffice,
-			balloonContentHeader: 'red'
 		}, /*текст появляющийся после нажатия*/ {
-			preset: 'islands#redCircleIcon'
+			preset: 'islands#redCircleIcon',
 		}))
 		.add(new ymaps.Placemark([55.758240, 37.678523], {
 			balloonContent: secondOffice
@@ -71,6 +66,7 @@ ymaps.ready(['Panel']).then(function () {
 		map.panTo(target.geometry.getCoordinates(), {
 			useMapMargin: true
 		});
+		
 	});
 });
 
