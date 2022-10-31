@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -107,367 +107,28 @@
 </div>
 
 <main>
+	<section class="map">
 	<div class="container">
-		<div class="breadcrumb">
-	<ul class="breadcrumb__list">
-		<li class="breadcrumb__item">
-			<a href="index.html" class="breadcrumb__link">
-				<svg width="14" height="13" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg" class="breadcrumb__home">
-					<path
-						d="M5.64724 11.7938V8.26434H8.47077V11.7938C8.47077 12.182 8.78842 12.4996 9.17665 12.4996H11.2943C11.6825 12.4996 12.0002 12.182 12.0002 11.7938V6.85258H13.2002C13.5249 6.85258 13.6802 6.45022 13.4331 6.23846L7.53195 0.923164C7.26371 0.683164 6.8543 0.683164 6.58607 0.923164L0.68489 6.23846C0.44489 6.45022 0.593125 6.85258 0.917831 6.85258H2.11783V11.7938C2.11783 12.182 2.43548 12.4996 2.82371 12.4996H4.94136C5.3296 12.4996 5.64724 12.182 5.64724 11.7938Z" />
-				</svg>
-			</a>
-		</li>
-		<li class="breadcrumb__item">
-			<a href="all-news.html" class="breadcrumb__link">Новости</a>
-		</li>
-	</ul>
-
-</div>
-	</div>
-	<section class="news">
-	<div class="container news__container">
-		<h1 class="h1 h1-title news__h1">Новости</h1>
-		<div class="news__tabs">
-			<div class="swiper" id="tabs-slider-news">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide tab__slide">
-						<button type="button" class="tab tab__active news__tab" id="tab-all-projects">Все проекты</button>
-					</div>
-					<div class="swiper-slide tab__slide">
-						<button type="button" class="tab news__tab" id="tab-project-1">КП Лесные берега</button>
-					</div>
-					<div class="swiper-slide tab__slide">
-						<button type="button" class="tab news__tab" id="tab-project-2">Прибрежный вилладж</button>
-					</div>
-					<div class="swiper-slide tab__slide">
-						<button type="button" class="tab news__tab" id="tab-project-3">Лесной вилладж</button>
-					</div>
-					<div class="swiper-slide tab__slide">
-						<button type="button" class="tab news__tab" id="tab-project-4">Каширка вилладж</button>
-					</div>
-					<div class="swiper-slide tab__slide">
-						<button type="button" class="tab news__tab" id="tab-project-5">Озерный</button>
-					</div>
-				</div>
-				<div class="swiper-button-prev tab__button-news-prev">
-					<svg width="8" height="12" xmlns="http://www.w3.org/2000/svg" fill="none">
-						<path transform="rotate(180 4 6)" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="white" d="m1.5,11l5,-5l-5,-5"></path>
-					</svg>
-				</div>
-				<div class="swiper-button-next tab__button-news-next">
-					<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M1.5 11L6.5 6L1.5 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-					</svg>
-				</div>
+		<div class="map__wrap" id="map"></div>
+		<div style="padding: 5px;">
+			<div>
+					Фильтр по цветам <br>
+					<input type='checkbox' id='red' checked=true>Красные</input><br>
+					<input type='checkbox' id='green' checked=true>Зеленые</input><br>
+					<input type='checkbox' id='yellow' checked=true>Желтые</input>
 			</div>
-		</div>
-		<div class="news__wrap" id="all-projects">
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-1.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">Выбран подрядчик под строительство въездной группы</h3>
-	<p class="txt news__txt">Далеко не&nbsp;вся Чукотка состоит из&nbsp;закрывающихся посёлков или медвежьих углов, где ценники в&nbsp;магазинах способны повергнуть постороннего в&nbsp;шок, а&nbsp;досуг скрасить нечем</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-2.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Лесные берега участки размежованы</h3>
-	<p class="txt news__txt">Пейзажи, окружающие арктический городок Эгвекинот, или как привыкли говорить в&nbsp;России&nbsp;&mdash; поселок городского типа, типично горные: &laquo;Высокие сопки и&nbsp;синее небо&raquo;.</p>
-	<time class="news__date">30.08.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-3.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Прибрежные озера первый дом встал на кадастровый учет</h3>
-	<p class="txt news__txt">Модернизацию пройдут ледоколы &laquo;Капитан Букаев&raquo;, &laquo;Капитан Зарубин&raquo;, &laquo;Капитан Чадаев&raquo; и&nbsp;&laquo;Капитан Чечкин&raquo;. Окончание проектных работ запланировано на&nbsp;весну 2023&nbsp;года.</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-1.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">Выбран подрядчик под строительство въездной группы</h3>
-	<p class="txt news__txt">Далеко не&nbsp;вся Чукотка состоит из&nbsp;закрывающихся посёлков или медвежьих углов, где ценники в&nbsp;магазинах способны повергнуть постороннего в&nbsp;шок, а&nbsp;досуг скрасить нечем</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-2.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Лесные берега участки размежованы</h3>
-	<p class="txt news__txt">Пейзажи, окружающие арктический городок Эгвекинот, или как привыкли говорить в&nbsp;России&nbsp;&mdash; поселок городского типа, типично горные: &laquo;Высокие сопки и&nbsp;синее небо&raquo;.</p>
-	<time class="news__date">30.08.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-3.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Прибрежные озера первый дом встал на кадастровый учет</h3>
-	<p class="txt news__txt">Модернизацию пройдут ледоколы &laquo;Капитан Букаев&raquo;, &laquo;Капитан Зарубин&raquo;, &laquo;Капитан Чадаев&raquo; и&nbsp;&laquo;Капитан Чечкин&raquo;. Окончание проектных работ запланировано на&nbsp;весну 2023&nbsp;года.</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-1.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">Выбран подрядчик под строительство въездной группы</h3>
-	<p class="txt news__txt">Далеко не&nbsp;вся Чукотка состоит из&nbsp;закрывающихся посёлков или медвежьих углов, где ценники в&nbsp;магазинах способны повергнуть постороннего в&nbsp;шок, а&nbsp;досуг скрасить нечем</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-2.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Лесные берега участки размежованы</h3>
-	<p class="txt news__txt">Пейзажи, окружающие арктический городок Эгвекинот, или как привыкли говорить в&nbsp;России&nbsp;&mdash; поселок городского типа, типично горные: &laquo;Высокие сопки и&nbsp;синее небо&raquo;.</p>
-	<time class="news__date">30.08.2022</time>
-</a>
-			<a href="news.html" class="news__item none-small">
-	<div class="news__img">
-		<img src="assets/img/dist/news-3.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Прибрежные озера первый дом встал на кадастровый учет</h3>
-	<p class="txt news__txt">Модернизацию пройдут ледоколы &laquo;Капитан Букаев&raquo;, &laquo;Капитан Зарубин&raquo;, &laquo;Капитан Чадаев&raquo; и&nbsp;&laquo;Капитан Чечкин&raquo;. Окончание проектных работ запланировано на&nbsp;весну 2023&nbsp;года.</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item none-small">
-	<div class="news__img">
-		<img src="assets/img/dist/news-1.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">Выбран подрядчик под строительство въездной группы</h3>
-	<p class="txt news__txt">Далеко не&nbsp;вся Чукотка состоит из&nbsp;закрывающихся посёлков или медвежьих углов, где ценники в&nbsp;магазинах способны повергнуть постороннего в&nbsp;шок, а&nbsp;досуг скрасить нечем</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item none-small">
-	<div class="news__img">
-		<img src="assets/img/dist/news-2.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Лесные берега участки размежованы</h3>
-	<p class="txt news__txt">Пейзажи, окружающие арктический городок Эгвекинот, или как привыкли говорить в&nbsp;России&nbsp;&mdash; поселок городского типа, типично горные: &laquo;Высокие сопки и&nbsp;синее небо&raquo;.</p>
-	<time class="news__date">30.08.2022</time>
-</a>
-			<a href="news.html" class="news__item none-small">
-	<div class="news__img">
-		<img src="assets/img/dist/news-3.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Прибрежные озера первый дом встал на кадастровый учет</h3>
-	<p class="txt news__txt">Модернизацию пройдут ледоколы &laquo;Капитан Букаев&raquo;, &laquo;Капитан Зарубин&raquo;, &laquo;Капитан Чадаев&raquo; и&nbsp;&laquo;Капитан Чечкин&raquo;. Окончание проектных работ запланировано на&nbsp;весну 2023&nbsp;года.</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item none">
-	<div class="news__img">
-		<img src="assets/img/dist/news-1.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">Выбран подрядчик под строительство въездной группы</h3>
-	<p class="txt news__txt">Далеко не&nbsp;вся Чукотка состоит из&nbsp;закрывающихся посёлков или медвежьих углов, где ценники в&nbsp;магазинах способны повергнуть постороннего в&nbsp;шок, а&nbsp;досуг скрасить нечем</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item none">
-	<div class="news__img">
-		<img src="assets/img/dist/news-2.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Лесные берега участки размежованы</h3>
-	<p class="txt news__txt">Пейзажи, окружающие арктический городок Эгвекинот, или как привыкли говорить в&nbsp;России&nbsp;&mdash; поселок городского типа, типично горные: &laquo;Высокие сопки и&nbsp;синее небо&raquo;.</p>
-	<time class="news__date">30.08.2022</time>
-</a>
-			<div class="news__inner">
-				<button type="button" class="button news__more">Показать еще</button>
+			<div>
+					Фильтр по геометриям <br>
+					<input type='checkbox' id='point' checked=true>Точки</input><br>
+					<input type='checkbox' id='polygon' checked=true>Многоугольники</input><br>
+					<input type='checkbox' id='circle' checked=true>Круги</input>
 			</div>
-		</div>
-		<div class="news__wrap" id="project-1">
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-2.jpg" alt="Новость" width="424" height="318" class="news__photo">
 	</div>
-	<h3 class="h6 news__subtitle">В поселке Лесные берега участки размежованы</h3>
-	<p class="txt news__txt">Пейзажи, окружающие арктический городок Эгвекинот, или как привыкли говорить в&nbsp;России&nbsp;&mdash; поселок городского типа, типично горные: &laquo;Высокие сопки и&nbsp;синее небо&raquo;.</p>
-	<time class="news__date">30.08.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-2.jpg" alt="Новость" width="424" height="318" class="news__photo">
 	</div>
-	<h3 class="h6 news__subtitle">В поселке Лесные берега участки размежованы</h3>
-	<p class="txt news__txt">Пейзажи, окружающие арктический городок Эгвекинот, или как привыкли говорить в&nbsp;России&nbsp;&mdash; поселок городского типа, типично горные: &laquo;Высокие сопки и&nbsp;синее небо&raquo;.</p>
-	<time class="news__date">30.08.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-2.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Лесные берега участки размежованы</h3>
-	<p class="txt news__txt">Пейзажи, окружающие арктический городок Эгвекинот, или как привыкли говорить в&nbsp;России&nbsp;&mdash; поселок городского типа, типично горные: &laquo;Высокие сопки и&nbsp;синее небо&raquo;.</p>
-	<time class="news__date">30.08.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-2.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Лесные берега участки размежованы</h3>
-	<p class="txt news__txt">Пейзажи, окружающие арктический городок Эгвекинот, или как привыкли говорить в&nbsp;России&nbsp;&mdash; поселок городского типа, типично горные: &laquo;Высокие сопки и&nbsp;синее небо&raquo;.</p>
-	<time class="news__date">30.08.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-2.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Лесные берега участки размежованы</h3>
-	<p class="txt news__txt">Пейзажи, окружающие арктический городок Эгвекинот, или как привыкли говорить в&nbsp;России&nbsp;&mdash; поселок городского типа, типично горные: &laquo;Высокие сопки и&nbsp;синее небо&raquo;.</p>
-	<time class="news__date">30.08.2022</time>
-</a>
-		</div>
-		<div class="news__wrap" id="project-2">
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-3.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Прибрежные озера первый дом встал на кадастровый учет</h3>
-	<p class="txt news__txt">Модернизацию пройдут ледоколы &laquo;Капитан Букаев&raquo;, &laquo;Капитан Зарубин&raquo;, &laquo;Капитан Чадаев&raquo; и&nbsp;&laquo;Капитан Чечкин&raquo;. Окончание проектных работ запланировано на&nbsp;весну 2023&nbsp;года.</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-3.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Прибрежные озера первый дом встал на кадастровый учет</h3>
-	<p class="txt news__txt">Модернизацию пройдут ледоколы &laquo;Капитан Букаев&raquo;, &laquo;Капитан Зарубин&raquo;, &laquo;Капитан Чадаев&raquo; и&nbsp;&laquo;Капитан Чечкин&raquo;. Окончание проектных работ запланировано на&nbsp;весну 2023&nbsp;года.</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-3.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Прибрежные озера первый дом встал на кадастровый учет</h3>
-	<p class="txt news__txt">Модернизацию пройдут ледоколы &laquo;Капитан Букаев&raquo;, &laquo;Капитан Зарубин&raquo;, &laquo;Капитан Чадаев&raquo; и&nbsp;&laquo;Капитан Чечкин&raquo;. Окончание проектных работ запланировано на&nbsp;весну 2023&nbsp;года.</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-3.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Прибрежные озера первый дом встал на кадастровый учет</h3>
-	<p class="txt news__txt">Модернизацию пройдут ледоколы &laquo;Капитан Букаев&raquo;, &laquo;Капитан Зарубин&raquo;, &laquo;Капитан Чадаев&raquo; и&nbsp;&laquo;Капитан Чечкин&raquo;. Окончание проектных работ запланировано на&nbsp;весну 2023&nbsp;года.</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-3.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Прибрежные озера первый дом встал на кадастровый учет</h3>
-	<p class="txt news__txt">Модернизацию пройдут ледоколы &laquo;Капитан Букаев&raquo;, &laquo;Капитан Зарубин&raquo;, &laquo;Капитан Чадаев&raquo; и&nbsp;&laquo;Капитан Чечкин&raquo;. Окончание проектных работ запланировано на&nbsp;весну 2023&nbsp;года.</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-		</div>
-		<div class="news__wrap" id="project-3">
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-2.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Лесные берега участки размежованы</h3>
-	<p class="txt news__txt">Пейзажи, окружающие арктический городок Эгвекинот, или как привыкли говорить в&nbsp;России&nbsp;&mdash; поселок городского типа, типично горные: &laquo;Высокие сопки и&nbsp;синее небо&raquo;.</p>
-	<time class="news__date">30.08.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-2.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Лесные берега участки размежованы</h3>
-	<p class="txt news__txt">Пейзажи, окружающие арктический городок Эгвекинот, или как привыкли говорить в&nbsp;России&nbsp;&mdash; поселок городского типа, типично горные: &laquo;Высокие сопки и&nbsp;синее небо&raquo;.</p>
-	<time class="news__date">30.08.2022</time>
-</a>
-		</div>
-		<div class="news__wrap" id="project-4">
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-1.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">Выбран подрядчик под строительство въездной группы</h3>
-	<p class="txt news__txt">Далеко не&nbsp;вся Чукотка состоит из&nbsp;закрывающихся посёлков или медвежьих углов, где ценники в&nbsp;магазинах способны повергнуть постороннего в&nbsp;шок, а&nbsp;досуг скрасить нечем</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-1.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">Выбран подрядчик под строительство въездной группы</h3>
-	<p class="txt news__txt">Далеко не&nbsp;вся Чукотка состоит из&nbsp;закрывающихся посёлков или медвежьих углов, где ценники в&nbsp;магазинах способны повергнуть постороннего в&nbsp;шок, а&nbsp;досуг скрасить нечем</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-1.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">Выбран подрядчик под строительство въездной группы</h3>
-	<p class="txt news__txt">Далеко не&nbsp;вся Чукотка состоит из&nbsp;закрывающихся посёлков или медвежьих углов, где ценники в&nbsp;магазинах способны повергнуть постороннего в&nbsp;шок, а&nbsp;досуг скрасить нечем</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-1.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">Выбран подрядчик под строительство въездной группы</h3>
-	<p class="txt news__txt">Далеко не&nbsp;вся Чукотка состоит из&nbsp;закрывающихся посёлков или медвежьих углов, где ценники в&nbsp;магазинах способны повергнуть постороннего в&nbsp;шок, а&nbsp;досуг скрасить нечем</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-1.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">Выбран подрядчик под строительство въездной группы</h3>
-	<p class="txt news__txt">Далеко не&nbsp;вся Чукотка состоит из&nbsp;закрывающихся посёлков или медвежьих углов, где ценники в&nbsp;магазинах способны повергнуть постороннего в&nbsp;шок, а&nbsp;досуг скрасить нечем</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-		</div>
-		<div class="news__wrap" id="project-5">
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-1.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">Выбран подрядчик под строительство въездной группы</h3>
-	<p class="txt news__txt">Далеко не&nbsp;вся Чукотка состоит из&nbsp;закрывающихся посёлков или медвежьих углов, где ценники в&nbsp;магазинах способны повергнуть постороннего в&nbsp;шок, а&nbsp;досуг скрасить нечем</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-2.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Лесные берега участки размежованы</h3>
-	<p class="txt news__txt">Пейзажи, окружающие арктический городок Эгвекинот, или как привыкли говорить в&nbsp;России&nbsp;&mdash; поселок городского типа, типично горные: &laquo;Высокие сопки и&nbsp;синее небо&raquo;.</p>
-	<time class="news__date">30.08.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-3.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Прибрежные озера первый дом встал на кадастровый учет</h3>
-	<p class="txt news__txt">Модернизацию пройдут ледоколы &laquo;Капитан Букаев&raquo;, &laquo;Капитан Зарубин&raquo;, &laquo;Капитан Чадаев&raquo; и&nbsp;&laquo;Капитан Чечкин&raquo;. Окончание проектных работ запланировано на&nbsp;весну 2023&nbsp;года.</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-1.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">Выбран подрядчик под строительство въездной группы</h3>
-	<p class="txt news__txt">Далеко не&nbsp;вся Чукотка состоит из&nbsp;закрывающихся посёлков или медвежьих углов, где ценники в&nbsp;магазинах способны повергнуть постороннего в&nbsp;шок, а&nbsp;досуг скрасить нечем</p>
-	<time class="news__date">04.09.2022</time>
-</a>
-			<a href="news.html" class="news__item">
-	<div class="news__img">
-		<img src="assets/img/dist/news-2.jpg" alt="Новость" width="424" height="318" class="news__photo">
-	</div>
-	<h3 class="h6 news__subtitle">В поселке Лесные берега участки размежованы</h3>
-	<p class="txt news__txt">Пейзажи, окружающие арктический городок Эгвекинот, или как привыкли говорить в&nbsp;России&nbsp;&mdash; поселок городского типа, типично горные: &laquo;Высокие сопки и&nbsp;синее небо&raquo;.</p>
-	<time class="news__date">30.08.2022</time>
-</a>
-		</div>
-		
-	</div>
+	
 </section>
+
+
 </main>
 
 <footer class="main-footer">
@@ -625,8 +286,9 @@
 		</div>
 	</div>
 </div>
-<script src="https://yastatic.net/share2/share.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=05a9a2c9-2906-441b-bc08-81f200f47beb&lang=ru_RU" type="text/javascript"></script>
 <script src="js/app.min.js"></script>
+<script src="js/appMap.js"></script>
 </body>
 
 </html>
