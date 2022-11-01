@@ -64,13 +64,13 @@ ymaps.ready(['Panel']).then(function () {
 			balloonContent: firstOffice,
 		}, /*текст появляющийся после нажатия*/ {
 			iconLayout: 'default#imageWithContent',
-			iconImageHref: '../assets/img/dist/map-ellipse.svg',
-			iconImageSize: [48, 48],
+			iconImageHref: 'assets/img/dist/map-ellipse.svg',
+			iconImageSize: [18, 18],
 			// Смещение левого верхнего угла иконки относительно
 			// её "ножки" (точки привязки).
-			iconImageOffset: [-24, -24],
+			iconImageOffset: [-9, -9],
 			// Смещение слоя с содержимым относительно слоя с картинкой.
-			iconContentOffset: [24, 15],
+			iconContentOffset: [-45, 0],
 			iconContentLayout: MyIconContentLayout,
 		}))
 		.add(new ymaps.Placemark([56.370077, 35.774790], {
@@ -79,13 +79,13 @@ ymaps.ready(['Panel']).then(function () {
 			balloonContent: secondOffice,
 		}, /*текст появляющийся после нажатия*/ {
 			iconLayout: 'default#imageWithContent',
-			iconImageHref: '../assets/img/dist/map-ellipse.svg',
-			iconImageSize: [48, 48],
+			iconImageHref: 'assets/img/dist/map-ellipse.svg',
+			iconImageSize: [18, 18],
 			// Смещение левого верхнего угла иконки относительно
 			// её "ножки" (точки привязки).
-			iconImageOffset: [-24, -24],
+			iconImageOffset: [-9, -9],
 			// Смещение слоя с содержимым относительно слоя с картинкой.
-			iconContentOffset: [15, 15],
+			iconContentOffset: [-74, 0],
 			iconContentLayout: MyIconContentLayout,
 		}));
 	// Добавим коллекцию на карту.
@@ -110,12 +110,16 @@ ymaps.ready(['Panel']).then(function () {
 		var topSidePanel = (heightMap - heightSidePanel) / 2;
 		$('.customControl').css('top', topSidePanel);
 	});
-});
+}
+
+);
 
 $("#map").on("click", ".liked", function () {
 	let $liked = $(this).parent().find('.liked__icon');
 	$liked.toggleClass('active');
 });
+
+
 
 // Пример реализации боковой панели на основе наследования от collection.Item.
 // Боковая панель отображает информацию, которую мы ей передали.
