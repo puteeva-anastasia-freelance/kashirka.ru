@@ -8,30 +8,38 @@ ymaps.ready(['Panel']).then(function () {
 	var firstOffice = '<div class="content__inner" style="background: center / cover no-repeat url(assets/img/dist/township-1.jpg);">' +
 		'<button type="button" class="liked content__liked"><svg width="28" height="23" viewBox="0 0 28 23" xmlns="http://www.w3.org/2000/svg" class="liked__icon"><path d="M24.3473 2.78577C23.7271 2.16522 22.9906 1.67295 22.1801 1.33709C21.3695 1.00124 20.5007 0.828369 19.6233 0.828369C18.7459 0.828369 17.8771 1.00124 17.0666 1.33709C16.256 1.67295 15.5196 2.16522 14.8993 2.78577L13.612 4.07303L12.3248 2.78577C11.0719 1.53288 9.3726 0.829019 7.60075 0.829019C5.8289 0.829019 4.12962 1.53288 2.87673 2.78577C1.62385 4.03866 0.919983 5.73794 0.919983 7.50979C0.919983 9.28164 1.62385 10.9809 2.87673 12.2338L4.164 13.5211L13.612 21.8651L23.0601 13.5211L24.3473 12.2338C24.9679 11.6135 25.4601 10.8771 25.796 10.0665C26.1319 9.25597 26.3047 8.38717 26.3047 7.50979C26.3047 6.6324 26.1319 5.7636 25.796 4.95304C25.4601 4.14248 24.9679 3.40603 24.3473 2.78577Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></button>' +
 		'<div class="content__top">' +
-		'<h2 class="content__name">Лесные берега</h2>' +
+		'<h2 class="content__name">Озерный</h2>' +
 		'<div class="content__prices">' +
 		'<span class="content__price content__price_old">от 85 000 руб/сот.</span>' +
 		'<span class="content__price">от <span class="content__price_big">75 000</span> руб/сот.</span>' +
 		'</div>' +
 		'<span class="content__distance">38 км. от МКАД</span>' +
 		'</div>' +
-	'</div>' +
-	'<div class="content__bottom">' +
-	'<span class="content__quantity">Участков в продаже: <b>18</b></span>' +
-	'<a href="town-card.html" class="content__more button">Подробнее</a>' +
+		'</div>' +
+		'<div class="content__bottom">' +
+		'<span class="content__quantity">Участков в продаже: <b>18</b></span>' +
+		'<a href="town-card.html" class="content__more button">Подробнее</a>' +
 		'</div>';
-	var secondOffice = 'Второй офис Яндекса на Самокатной улице.';
-	var thirdOffice = '<a href="https://yandex.ru/company/contacts/moscow/">Главный офис Яндекса</a>' +
-		'<p><img style="width: 190px;" src="img/office.jpeg"></p>' +
-		'<p>В офисе на улице Льва Толстого находится штаб-квартира Яндекса, он самый большой и по размерам, ' +
-		'и по численности сотрудников. Сейчас он занимает почти целый квартал между улицами Льва Толстого ' +
-		'и Тимура Фрунзе. Общая площадь всех зданий — более 50 тысяч квадратных метров.</p>';
+	var secondOffice = '<div class="content__inner" style="background: center / cover no-repeat url(assets/img/dist/township-2.jpg);">' +
+		'<button type="button" class="liked content__liked"><svg width="28" height="23" viewBox="0 0 28 23" xmlns="http://www.w3.org/2000/svg" class="liked__icon"><path d="M24.3473 2.78577C23.7271 2.16522 22.9906 1.67295 22.1801 1.33709C21.3695 1.00124 20.5007 0.828369 19.6233 0.828369C18.7459 0.828369 17.8771 1.00124 17.0666 1.33709C16.256 1.67295 15.5196 2.16522 14.8993 2.78577L13.612 4.07303L12.3248 2.78577C11.0719 1.53288 9.3726 0.829019 7.60075 0.829019C5.8289 0.829019 4.12962 1.53288 2.87673 2.78577C1.62385 4.03866 0.919983 5.73794 0.919983 7.50979C0.919983 9.28164 1.62385 10.9809 2.87673 12.2338L4.164 13.5211L13.612 21.8651L23.0601 13.5211L24.3473 12.2338C24.9679 11.6135 25.4601 10.8771 25.796 10.0665C26.1319 9.25597 26.3047 8.38717 26.3047 7.50979C26.3047 6.6324 26.1319 5.7636 25.796 4.95304C25.4601 4.14248 24.9679 3.40603 24.3473 2.78577Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></button>' +
+		'<div class="content__top">' +
+		'<h2 class="content__name">Каширка вилладж</h2>' +
+		'<div class="content__prices">' +
+		'<span class="content__price content__price_old none"></span>' +
+		'<span class="content__price">от <span class="content__price_big">85 000</span> руб/сот.</span>' +
+		'</div>' +
+		'<span class="content__distance">38 км. от МКАД</span>' +
+		'</div>' +
+		'</div>' +
+		'<div class="content__bottom">' +
+		'<span class="content__quantity">Участков в продаже: <b>23</b></span>' +
+		'<a href="town-card.html" class="content__more button">Подробнее</a>' +
+		'</div>';
 	// Создадим и добавим панель на карту.
 	var panel = new ymaps.Panel();
 	map.controls.add(panel, {
 		float: 'right',
 		position: {
-			top: '152px',
 			right: '20px'
 		}
 	});
@@ -40,33 +48,67 @@ ymaps.ready(['Panel']).then(function () {
 		// Запретим появление балуна.
 		hasBalloon: false,
 	});
-	// Добавим геообъекты в коллекцию.
-	collection
+
+		// Создаём макет содержимого.
+		MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+			'<span class="map__label-sign"><span class="map__label-sum">$[properties.iconContentQuantity]</span>$[properties.iconContentName]</span>'
+		),
+		MyIconContentLayoutClick = ymaps.templateLayoutFactory.createClass(
+			'<span class="map__label-sign active"><span class="map__label-sum">$[properties.iconContentQuantity]</span>$[properties.iconContentName]</span>'
+		),
+		// Добавим геообъекты в коллекцию.
+		collection
 		.add(new ymaps.Placemark([56.370077, 34.774790], {
-			iconContent: '<span class="map__label-sign"><span class="map__label-sum">37</span>Озерный</span>',
+			iconContentQuantity: 18,
+			iconContentName: 'Озерный',
 			balloonContent: firstOffice,
 		}, /*текст появляющийся после нажатия*/ {
-			preset: 'islands#redCircleIcon',
+			iconLayout: 'default#imageWithContent',
+			iconImageHref: '../assets/img/dist/map-ellipse.svg',
+			iconImageSize: [48, 48],
+			// Смещение левого верхнего угла иконки относительно
+			// её "ножки" (точки привязки).
+			iconImageOffset: [-24, -24],
+			// Смещение слоя с содержимым относительно слоя с картинкой.
+			iconContentOffset: [24, 15],
+			iconContentLayout: MyIconContentLayout,
 		}))
-		.add(new ymaps.Placemark([55.758240, 37.678523], {
-			balloonContent: secondOffice
-		}))
-		.add(new ymaps.Placemark([55.693784, 37.564942], {
-			balloonContent: firstOffice
+		.add(new ymaps.Placemark([56.370077, 35.774790], {
+			iconContentQuantity: 23,
+			iconContentName: 'Каширка вилладж',
+			balloonContent: secondOffice,
+		}, /*текст появляющийся после нажатия*/ {
+			iconLayout: 'default#imageWithContent',
+			iconImageHref: '../assets/img/dist/map-ellipse.svg',
+			iconImageSize: [48, 48],
+			// Смещение левого верхнего угла иконки относительно
+			// её "ножки" (точки привязки).
+			iconImageOffset: [-24, -24],
+			// Смещение слоя с содержимым относительно слоя с картинкой.
+			iconContentOffset: [15, 15],
+			iconContentLayout: MyIconContentLayout,
 		}));
 	// Добавим коллекцию на карту.
 	map.geoObjects.add(collection);
+
 	// Подпишемся на событие клика по коллекции.
 	collection.events.add('click', function (e) {
 		// Получим ссылку на геообъект, по которому кликнул пользователь.
 		var target = e.get('target');
 		// Зададим контент боковой панели.
 		panel.setContent(target.properties.get('balloonContent'));
-		// Переместим центр карты по координатам метки с учётом заданных отступов.
-		map.panTo(target.geometry.getCoordinates(), {
-			useMapMargin: true
-		});
 		
+		//При клике на коллекцию удалим у всех элементов с классом map__label-sign класс active
+		$('.map__label-sign').removeClass('active');
+
+		//Поменяем значение iconContentLayout на MyIconContentLayoutClick
+		e.get('target').options.set("iconContentLayout", MyIconContentLayoutClick);
+
+		/*Центрировать боковую панель по оси Y*/
+		var heightMap = $('.map__wrap').outerHeight();
+		var heightSidePanel = $('.customControl').outerHeight();
+		var topSidePanel = (heightMap - heightSidePanel) / 2;
+		$('.customControl').css('top', topSidePanel);
 	});
 });
 
@@ -119,6 +161,9 @@ ymaps.modules.define('Panel', [
 		},
 		_onClose: function () {
 			$('.customControl').css('display', 'none');
+			
+			//При закрытии окна у всех элементов с классом map__label-sign удаляем класс active
+			$('.map__label-sign').removeClass('active');
 		},
 		// Метод задания контента панели.
 		setContent: function (text) {
