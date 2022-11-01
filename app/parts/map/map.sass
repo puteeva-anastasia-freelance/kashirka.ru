@@ -18,8 +18,16 @@
 			top: 10px
 			position: absolute
 			top: -44px
-			left: -50px
-			cursor: pointer
+			width: max-content
+
+			&.active
+				background-color: $accent
+				color: $white
+
+				.map__label-sum
+					background-color: $white
+					color: $txt
+					font-weight: 500
 		
 		&-sum
 			background-color: $txt
@@ -41,7 +49,6 @@
 
 	.closeButton
 		padding: 3px
-		height: 15px
 		cursor: pointer
 		position: absolute
 		left: -50px
@@ -83,13 +90,29 @@
 		
 		&__name
 			font-size: 24px
+			margin-bottom: 3px
+			margin-right: 15px
+		
+		&__prices
+			display: flex
+			align-items: flex-end
+			flex-wrap: wrap
+			margin-bottom: -8px
+			margin-top: -1px
 		
 		&__price
 			font-size: 16px
+			display: block
+			margin-bottom: 9px
+
+			&.none
+				display: none
 
 			&_old
 				text-decoration: line-through
 				margin-right: 10px
+				margin-bottom: 11px
+				margin-top: 8px
 			
 			&_big
 				font-size: 26px
@@ -97,6 +120,9 @@
 		&__distance
 			font-family: $pt-font
 			font-size: 16px
+			margin-top: 6px
+			width: 100%
+			display: block
 		
 		&__bottom
 			padding: 20px
@@ -115,7 +141,3 @@
 
 input[type="checkbox"]
 	appearance: auto
-
-.ymaps-2-1-79-svg-icon
-	background-image: url(../assets/img/dist/map-ellipse.svg)!important
-	width: 300px
