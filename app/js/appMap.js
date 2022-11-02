@@ -1,6 +1,5 @@
-
 ymaps.ready(['Panel']).then(function () {
-		 var map = new ymaps.Map("map", {
+		var map = new ymaps.Map("map", {
 			center: [56.185107, 36.977631],
 			zoom: 8,
 			controls: []
@@ -35,6 +34,21 @@ ymaps.ready(['Panel']).then(function () {
 			'</div>' +
 			'<div class="content__bottom">' +
 			'<span class="content__quantity">Участков в продаже: <b>23</b></span>' +
+			'<a href="town-card.html" class="content__more button">Подробнее</a>' +
+			'</div>';
+		var thirdOffice = '<div class="content__inner" style="background: center / cover no-repeat url(assets/img/dist/township-3.jpg);">' +
+			'<button type="button" class="liked content__liked"><svg width="28" height="23" viewBox="0 0 28 23" xmlns="http://www.w3.org/2000/svg" class="liked__icon"><path d="M24.3473 2.78577C23.7271 2.16522 22.9906 1.67295 22.1801 1.33709C21.3695 1.00124 20.5007 0.828369 19.6233 0.828369C18.7459 0.828369 17.8771 1.00124 17.0666 1.33709C16.256 1.67295 15.5196 2.16522 14.8993 2.78577L13.612 4.07303L12.3248 2.78577C11.0719 1.53288 9.3726 0.829019 7.60075 0.829019C5.8289 0.829019 4.12962 1.53288 2.87673 2.78577C1.62385 4.03866 0.919983 5.73794 0.919983 7.50979C0.919983 9.28164 1.62385 10.9809 2.87673 12.2338L4.164 13.5211L13.612 21.8651L23.0601 13.5211L24.3473 12.2338C24.9679 11.6135 25.4601 10.8771 25.796 10.0665C26.1319 9.25597 26.3047 8.38717 26.3047 7.50979C26.3047 6.6324 26.1319 5.7636 25.796 4.95304C25.4601 4.14248 24.9679 3.40603 24.3473 2.78577Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></button>' +
+			'<div class="content__top">' +
+			'<h2 class="content__name">Лесной вилладж</h2>' +
+			'<div class="content__prices">' +
+			'<span class="content__price content__price_old none"></span>' +
+			'<span class="content__price">от <span class="content__price_big">150 000</span> руб/сот.</span>' +
+			'</div>' +
+			'<span class="content__distance">45 км. от МКАД</span>' +
+			'</div>' +
+			'</div>' +
+			'<div class="content__bottom">' +
+			'<span class="content__quantity">Участков в продаже: <b>25</b></span>' +
 			'<a href="town-card.html" class="content__more button">Подробнее</a>' +
 			'</div>';
 		// Создадим и добавим панель на карту.
@@ -75,10 +89,25 @@ ymaps.ready(['Panel']).then(function () {
 				iconContentOffset: [-45, 0],
 				iconContentLayout: MyIconContentLayout,
 			}))
-			.add(new ymaps.Placemark([56.370077, 35.774790], {
+			.add(new ymaps.Placemark([56.100077, 34.874790], {
 				iconContentQuantity: 23,
 				iconContentName: 'Каширка вилладж',
 				balloonContent: secondOffice,
+			}, /*текст появляющийся после нажатия*/ {
+				iconLayout: 'default#imageWithContent',
+				iconImageHref: 'assets/img/dist/map-ellipse.svg',
+				iconImageSize: [18, 18],
+				// Смещение левого верхнего угла иконки относительно
+				// её "ножки" (точки привязки).
+				iconImageOffset: [-9, -9],
+				// Смещение слоя с содержимым относительно слоя с картинкой.
+				iconContentOffset: [-74, 0],
+				iconContentLayout: MyIconContentLayout,
+			}))
+			.add(new ymaps.Placemark([56.300077, 35.874790], {
+				iconContentQuantity: 25,
+				iconContentName: 'Лесной вилладж',
+				balloonContent: thirdOffice,
 			}, /*текст появляющийся после нажатия*/ {
 				iconLayout: 'default#imageWithContent',
 				iconImageHref: 'assets/img/dist/map-ellipse.svg',
@@ -103,7 +132,7 @@ ymaps.ready(['Panel']).then(function () {
 
 			//Поменяем значение iconContentLayout на MyIconContentLayout для всех меток
 			collection.each(function (object) {
-				object.options.set("iconContentLayout", MyIconContentLayout);		
+				object.options.set("iconContentLayout", MyIconContentLayout);
 			});
 
 			//Поменяем значение iconContentLayout на MyIconContentLayoutClick для конкретной метки
@@ -113,22 +142,33 @@ ymaps.ready(['Panel']).then(function () {
 			var heightMap = $('.map__wrap').outerHeight();
 			var heightSidePanel = $('.customControl').outerHeight();
 			var topSidePanel = (heightMap - heightSidePanel) / 2;
-			$('.customControl').css('top', topSidePanel);
+			$('.customControl').css('top', topSidePanel);			
+
 		});
+
+		//При наведении на элемент коллекции
+		collection.events.add('mouseenter', function (e) {
+			e.get('target').options.set("iconImageHref", 'assets/img/dist/map-ellipse-hover.svg');
+		})
+
+		//Когда убираем курсор с элемента коллекции
+		collection.events.add('mouseleave', function (e) {
+			e.get('target').options.set("iconImageHref", 'assets/img/dist/map-ellipse.svg');
+		})
 
 		//При клике на liked добавим класс active у liked__icon
 		$("#map").on("click", ".liked", function () {
 			let $liked = $(this).parent().find('.liked__icon');
 			$liked.toggleClass('active');
-		});		
+		});
 
 		//При клике на closeButton поменяем значение iconContentLayout на MyIconContentLayout для всех меток
 		$("#map").on("click", ".closeButton", function () {
 			collection.each(function (object) {
-				object.options.set("iconContentLayout", MyIconContentLayout);		
+				object.options.set("iconContentLayout", MyIconContentLayout);
 			});
 		});
-    
+
 	}
 
 );

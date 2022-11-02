@@ -42,15 +42,6 @@
 			stroke: $txt
 			margin-right: 13px
 			transition: stroke .2s ease-in-out 
-
-	.select2-selection--single
-		border: 0
-		font-family: $pt-font
-		font-weight: 500
-		font-size: 16px
-
-		@media (max-width: 360px)
-			font-size: 14px
 	
 	.select2-container--default .select2-selection--single .select2-selection__arrow
 		top: 1px
@@ -67,13 +58,32 @@
 			height: 6px
 			background-repeat: no-repeat
 			border: 0
+			transition: background-image .2s ease-in-out
+	
+	.select2-container .select2-selection--single .select2-selection__rendered
+		padding: 0
+		color: $txt
+		transition: color .2s ease-in-out		
+	
+	.select2-selection--single
+		border: 0
+		font-family: $pt-font
+		font-weight: 500
+		font-size: 16px
+
+		@media (max-width: 360px)
+			font-size: 14px
+		
+		&:hover
+			.select2-selection__rendered
+				color: $accent
+
+			.select2-selection__arrow b
+				background-image: url("data:image/svg+xml,%3Csvg width='12' height='6' viewBox='0 0 12 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 0.75L6 5.25L10.5 0.75' stroke='%23DF3F3F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ")	
 			
 	.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow
 		b
 			transform: rotate(180deg)
-	
-	.select2-container .select2-selection--single .select2-selection__rendered
-		padding: 0
 
 	.select2-selection--single:focus-visible
 		outline: none
@@ -84,4 +94,6 @@
 
 		@media (max-width: 360px)
 			width: 165px!important
+		
+		
 	
