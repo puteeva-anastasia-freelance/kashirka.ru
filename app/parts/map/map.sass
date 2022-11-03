@@ -1,4 +1,20 @@
 .map
+	padding-bottom: 100px
+
+	@media (max-width: 1200px)
+		padding-bottom: 80px
+	
+	@media (max-width: 576px)
+		padding: 0
+		
+	&__container
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+		@media (max-width: 576px)
+			padding: 0
+
 	&__wrap
 		width: 100%
 		height: 700px
@@ -19,6 +35,9 @@
 			position: absolute
 			top: -42px
 			width: max-content
+
+			@media (max-width: 576px)
+				display: none
 
 			&.active
 				background-color: $accent
@@ -47,6 +66,14 @@
 		width: 340px
 		position: relative
 
+		@media (max-width: 576px)
+			top: 75px!important
+			left: 0
+			right: 0
+			margin: 0 auto
+			width: calc(100% - 20px)
+			max-width: 340px
+
 	.closeButton
 		padding: 3px
 		cursor: pointer
@@ -60,6 +87,11 @@
 		display: flex
 		align-items: center
 		justify-content: center
+
+		@media (max-width: 576px)
+			left: auto
+			right: 0
+			top: -45px
 
 		&-icon
 			stroke: #6D7278
@@ -81,12 +113,13 @@
 		
 		&__liked
 			position: absolute
-			right: 11px
-			top: 16px
+			right: 9px
+			top: 14px
+
 		
 		&__top
 			color: $white
-			padding: 15px
+			padding: 16.5px 15px
 		
 		&__name
 			font-size: 24px
@@ -125,12 +158,12 @@
 			display: block
 		
 		&__bottom
-			padding: 20px
+			padding: 22px 20px 20px
 		
 		&__quantity
 			font-family: $pt-font
 			font-size: 16px
-			margin-bottom: 20px
+			margin-bottom: 22px
 			display: block
 
 			b
@@ -138,11 +171,201 @@
 		
 		&__more
 			width: 100%
+
+			@media (max-width: 576px)
+				min-height: 54px
 	
 	.ymaps-2-1-79-image-with-content
 		transition: background-image .2s ease-in-out
-
-input[type="checkbox"]
-	appearance: auto
-
 	
+	.ymaps-2-1-79-controls__control
+		@media (max-width: 576px)
+			inset: 0!important
+			right: 0
+			left: 0
+			position: absolute!important
+	
+	&__tabs
+		width: calc(100% - 200px)
+
+		@media (max-width: 1200px)
+			margin-top: 1px
+		
+		@media (max-width: 576px)
+			display: none
+
+	.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled
+		opacity: 0
+	
+	.swiper-button-next, .swiper-button-prev
+		width: 50px
+		height: 50px
+		background-color: $accent
+		box-shadow: 0px 5px 15px rgba(139, 154, 173, 0.15)
+		border-radius: 4px
+		top: 47%
+		transition: background-color .2s ease-in-out
+
+		@media (max-width: 576px)
+			width: 44px
+			height: 44px
+			top: 50%
+
+		&:hover
+			background-color: #d12323
+		
+		&::after
+			display: none
+	
+	.swiper-button-next
+		right: 0
+	
+	.swiper-button-prev
+		left: 0
+	
+	.swiper-slide 
+		margin-right: 9.8px
+		
+		&:last-child
+			margin-right: 0
+	
+	.swiper
+		padding-top: 39px
+		padding-bottom: 39.5px
+
+		@media (max-width: 1200px)
+			padding-bottom: 29px
+			padding-top: 28.5px
+		
+		@media (max-width: 992px)
+			padding-bottom: 30px
+			padding-top: 29.5px
+		
+		@media (max-width: 576px)
+			padding-bottom: 30px
+	
+	&__as-list
+		width: 156px
+		height: 49.5px
+		border: 2px solid $accent
+		border-radius: 4px
+		display: flex
+		align-items: center
+		justify-content: center
+		text-decoration: none
+		font-family: $pt-font
+		font-weight: 500
+		font-size: 16px
+		color: $txt
+		margin-top: 39px
+		background-color: $white
+		transition: background-color .2s ease-in-out, color .2s ease-in-out
+		box-sizing: border-box
+
+		@media (max-width: 1200px)
+			margin-top: 30px
+		
+		@media (max-width: 576px)
+			display: none
+
+		&:hover
+			background-color: $accent
+			color: $white
+
+			.map__as-list-icon
+				stroke: $white
+
+		&-icon
+			margin-right: 12px
+			stroke: $txt
+			transition: stroke .2s ease-in-out
+	
+	&__buttons
+		@media (max-width: 576px)
+			position: fixed
+			bottom: 10px
+			display: flex
+			justify-content: space-between
+			padding-left: 10px
+			padding-right: 10px
+			box-sizing: border-box
+			width: 100%
+
+	&__button
+		&-filter
+			@media (max-width: 576px)
+				width: calc(50% - 5px)
+				text-transform: none
+				font-size: 16px
+
+			&-icon
+				fill: $white
+				stroke: $white
+
+			&-txt
+				@media (max-width: 576px)
+					margin-left: 10px
+
+		&-list
+			@media (max-width: 576px)
+				display: flex
+				width: calc(50% - 5px)
+				margin: 0
+				height: 50px
+				
+	&__filter
+		@media (max-width: 576px)
+			display: none
+			width: 100%
+			height: 100%
+			background-color: $white
+			z-index: 1000
+			position: fixed
+			top: 0
+			right: 0
+			left: 0
+			bottom: 0
+			overflow: hidden
+
+		&-header
+			height: 56px
+			width: 100%
+			box-shadow: 0px 5px 15px rgba(139, 154, 173, 0.15)
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding: 0 14px 0 20px
+			box-sizing: border-box
+		
+		&-title
+			font-family: $pt-font
+			font-weight: 500
+			font-size: 16px
+			display: flex
+			align-items: center
+
+			&-icon
+				margin-right: 12px
+		
+		&-close
+			margin-top: 3px
+	
+		&-tabs
+			padding: 30px 10px
+			margin-right: -6px
+
+			.tab
+				margin-right: 6px
+				margin-bottom: 10px
+	
+		&-button-show
+			margin-left: 10px
+			margin-right: 10px
+			width: calc(100% - 20px)
+			text-transform: none	
+			font-size: 16px
+			position: absolute
+			bottom: 10px
+			max-width: 100%	
+			
+			
