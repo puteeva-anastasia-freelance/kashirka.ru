@@ -105,9 +105,6 @@ ymaps.ready(['Panel']).then(function () {
 		var panel = new ymaps.Panel();
 		map.controls.add(panel, {
 			float: 'right',
-			position: {
-				right: '20px'
-			}
 		});
 		// Создадим коллекцию геообъектов.
 		var collection = new ymaps.GeoObjectCollection(null, {
