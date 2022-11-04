@@ -125,7 +125,6 @@ ymaps.ready(['Panel']).then(function () {
 				iconContentQuantity: 37,
 				iconContentName: 'Озерный',
 				balloonContent: lakeVillage,
-				aboutMoscow: true,
 			}, /*текст появляющийся после нажатия*/ {
 				iconLayout: 'default#imageWithContent',
 				iconImageHref: 'assets/img/dist/map-ellipse.svg',
@@ -141,7 +140,6 @@ ymaps.ready(['Panel']).then(function () {
 				iconContentQuantity: 23,
 				iconContentName: 'Каширка вилладж',
 				balloonContent: kashirkaVillage,
-				aboutMoscow: true,
 			}, /*текст появляющийся после нажатия*/ {
 				iconLayout: 'default#imageWithContent',
 				iconImageHref: 'assets/img/dist/map-ellipse.svg',
@@ -157,7 +155,6 @@ ymaps.ready(['Panel']).then(function () {
 				iconContentQuantity: 25,
 				iconContentName: 'Лесной вилладж',
 				balloonContent: forestVillage,
-				aboutMoscow: false,
 			}, /*текст появляющийся после нажатия*/ {
 				iconLayout: 'default#imageWithContent',
 				iconImageHref: 'assets/img/dist/map-ellipse.svg',
@@ -173,7 +170,6 @@ ymaps.ready(['Panel']).then(function () {
 				iconContentQuantity: 18,
 				iconContentName: 'Лесные берега',
 				balloonContent: forestShores,
-				aboutMoscow: true,
 			}, /*текст появляющийся после нажатия*/ {
 				iconLayout: 'default#imageWithContent',
 				iconImageHref: 'assets/img/dist/map-ellipse.svg',
@@ -189,7 +185,6 @@ ymaps.ready(['Panel']).then(function () {
 				iconContentQuantity: 9,
 				iconContentName: 'Прибрежный вилладж',
 				balloonContent: coastalVillage,
-				aboutMoscow: true,
 			}, /*текст появляющийся после нажатия*/ {
 				iconLayout: 'default#imageWithContent',
 				iconImageHref: 'assets/img/dist/map-ellipse.svg',
