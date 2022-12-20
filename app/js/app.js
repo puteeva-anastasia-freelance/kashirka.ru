@@ -710,6 +710,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.pop-up__overlay, .pop-up').hide();
 	})
 
+	$('.plan__open').click(function () {
+		var popup_id = $('#' + $(this).attr("rel"));
+		$(popup_id).show();
+		$('.pop-up__overlay').show();
+	})
+	$('.pop-up__close').click(function () {
+		$('.pop-up__overlay, .pop-up').hide();
+	})
+
 	$('.employee__all').click(function () {
 		$('.employee__item').show();
 		$('.employee__all').hide();
@@ -811,7 +820,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.standard__video').attr('poster', 'assets/img/dist/standard-poster-small.jpg')
 	}
 
-	lightGallery(document.getElementById("gallery-plan"), {
+/*	lightGallery(document.getElementById("gallery-plan"), {
 		speed: 500,
 		plugins: [lgZoom, lgHash],
 		mobileSettings: {
@@ -819,11 +828,14 @@ document.addEventListener('DOMContentLoaded', () => {
 			showCloseIcon: true,
 			download: true,
 		},
-	});
+	}); */
 
 	var maxHeightReviewsBottom = Math.max.apply(null, $(".reviews__bottom").map(function () {
 		return $(this).height();
 	}).get());
 	$('.reviews__bottom').css('height', maxHeightReviewsBottom);
 
+	
+	let heightMap = $('.location__right').outerHeight();
+	$('.map__wrap').css('height', heightMap);
 })
