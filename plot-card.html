@@ -227,7 +227,7 @@
 		<h2 class="h2 plan__title">Участок на плане поселка</h2>
 		<div class="plan__left">
 			<div id="gallery-plan">
-				<button type="button" data-lg-size="1400-1400" class="gallery-item" data-src="assets/img/dist/plan.jpg" data-sub-html="План коттеджного поселка Лесные берега">
+				<button type="button" class="plan__open" rel="popup4">
 					<span class="plan__play">
 						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -2128,6 +2128,20 @@
 					<p class="reviews__desc">Взяли участок на старте продаж, когда вокруг был ковид и самоизоляция. Сейчас очень рады, что не стали экономить и взяли сразу 2 участка, потому что дача на 5 сотках - это как квартира в 33 кв. м.: вроде жить можно, но как-то на голове друг у друга. Сейчас у нас 11 соток, электричество подведено, планируем до осени поставить коробку. В поселке накатывают дороги, будет асфальтовая крошка, строят забор вокруг. Рада, что будет охрана, чтобы по территории не шатались посторонние. Неподалеку магазины, где можно взять продукты и все необходимое для хозяйства, если что-то забыл. Но далековато, без машины будет трудно все возить с собой. 	</p>
 				</div>
 			</div>
+			<button type="button" class="pop-up__close">
+				<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="pop-up__close-icon">
+						<path d="M14.8571 1.14282L1.14282 14.8571" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M1.14282 1.14282L14.8571 14.8571" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</button>
+		</div>
+	</div>
+</div>
+
+<div class="pop-up" id="popup4">
+	<div class="pop-up__container">
+		<div class="pop-up__body pop-up__body_plan">
+			<img src="assets/img/dist/plan.jpg" alt="План коттеджного поселка Лесные берега" width="100%" height="auto" class="pop-up__plan">
 			<button type="button" class="pop-up__close">
 				<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="pop-up__close-icon">
 						<path d="M14.8571 1.14282L1.14282 14.8571" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
