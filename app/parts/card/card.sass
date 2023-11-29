@@ -1,0 +1,322 @@
+.card
+	padding-top: 94px
+	padding-bottom: 100px
+
+	@media (max-width: 1200px)
+		padding-top: 75px
+		padding-bottom: 81px
+
+	@media (max-width: 992px)
+		padding-top: 74px
+
+	@media (max-width: 576px)
+		padding-top: 56px
+		padding-bottom: 60px
+
+	&__tabs
+		margin-top: 34.5px
+
+		@media (max-width: 1200px)
+			margin-top: 24px
+
+		@media (max-width: 992px)
+			margin-top: 25px
+
+		&_plots
+			margin-top: 33px
+
+			@media (max-width: 1200px)
+				margin-top: 24px
+
+			@media (max-width: 576px)
+				margin-top: 25px
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin-bottom: -32px
+
+		@media (max-width: 1200px)
+			margin-bottom: -24px
+
+		@media (max-width: 992px)
+			margin-bottom: -20px
+
+		@media (max-width: 576px)
+			margin-bottom: -10px
+
+	&__inner
+		width: calc(50% - 16px)
+		height: 490px
+		color: $white
+		position: relative
+		box-sizing: border-box
+		border-radius: 4px
+		margin-bottom: 32px
+		transition: box-shadow .3s ease-in-out
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+
+		@media (max-width: 1200px)
+			width: calc(50% - 12px)
+			height: 352px
+			margin-bottom: 24px
+
+		@media (max-width: 992px)
+			margin-bottom: 20px
+			width: calc(50% - 10px)
+			height: 270px
+
+		@media (max-width: 576px)
+			width: 100%
+			height: 255px
+			margin-bottom: 10px
+
+		&.active
+			box-shadow: 0 5px 15px rgb(139 154 173 / 100%)
+
+		&-100
+			width: 100%
+			height: 300px
+
+			@media (max-width: 992px)
+				height: 270px
+
+			@media (max-width: 576px)
+				height: 255px
+
+		&.none
+			display: none
+
+	&__liked
+		position: absolute
+		right: 24px
+		top: 29px
+
+		@media (max-width: 1200px)
+			right: 9px
+			top: 15px
+
+		@media (max-width: 992px)
+			top: 14px
+
+	&__name
+		margin-right: 31px
+
+		@media (max-width: 1200px)
+			margin-right: 16px
+
+		@media (max-width: 992px)
+			margin-bottom: 3px
+			margin-right: 15px
+
+	&__bottom
+		box-sizing: border-box
+		display: flex
+		align-items: flex-end
+		flex-wrap: wrap
+		padding-bottom: 32px
+		padding-right: 30px
+		padding-left: 30px
+		width: 100%
+		color: inherit
+		text-decoration: none
+		height: 100%
+
+		@media (max-width: 1200px)
+			padding-bottom: 17px
+			padding-left: 15px
+			padding-right: 15px
+
+		&-inner
+			width: 100%
+			display: flex
+			flex-wrap: wrap
+
+		&-100
+			padding-top: 88px
+
+		&_plots
+			padding-bottom: 42px
+
+			@media (max-width: 1200px)
+				padding-bottom: 16px
+
+	&__distance
+		width: 100%
+		font-family: $pt-font
+		font-size: 17px
+		margin-top: 13px
+
+		@media (max-width: 1200px)
+			margin-top: 9px
+
+		@media (max-width: 992px)
+			font-size: 16px
+			margin-top: 6px
+
+		&_township
+			margin-top: 16px
+
+			@media (max-width: 1200px)
+				margin-top: 9px
+
+			@media (max-width: 992px)
+				margin-top: 6px
+
+	&__chevron
+		position: absolute
+		right: 30px
+		bottom: 30px
+		z-index: 99999
+
+		&_plots
+			bottom: 40px
+
+		@media (max-width: 1200px)
+			display: none
+
+	&__prices
+		margin-top: 1px
+
+		@media (max-width: 992px)
+			margin-top: -1px
+			display: flex
+			flex-wrap: wrap
+			margin-bottom: -8px
+			align-items: flex-end
+
+	&__price
+		font-size: 20px
+
+		@media (max-width: 1200px)
+			font-size: 16px
+
+		@media (max-width: 992px)
+			display: block
+			margin-bottom: 9px
+
+		&.none
+			display: none
+
+			@media (max-width: 992px)
+				& + .card__price
+					margin-bottom: 13px
+
+		&_big
+			font-size: 30px
+
+			@media (max-width: 1200px)
+				font-size: 24px
+
+		&_old
+			text-decoration: line-through
+			margin-right: 7px
+
+			@media (max-width: 1200px)
+				margin-right: 8px
+
+			@media (max-width: 992px)
+				margin-right: 10px
+				margin-top: 8px
+				margin-bottom: 11px
+
+		&_plots
+			margin-right: 13px
+
+	&__labels
+		padding-top: 29.5px
+		padding-right: 50px
+		padding-left: 30px
+
+		@media (max-width: 1200px)
+			padding-top: 17px
+			padding-left: 15px
+
+		@media (max-width: 992px)
+			padding-top: 15px
+
+		@media (max-width: 576px)
+			padding-top: 16px
+
+		&_plots
+			@media (max-width: 992px)
+				padding-top: 16px
+
+			@media (max-width: 576px)
+				padding-top: 15px
+
+	&__label
+		background-color: rgba(25, 25, 25, 0.6)
+
+	&__title
+		letter-spacing: normal
+
+		@media (max-width: 1200px)
+			letter-spacing: 0.02em
+
+	&__all
+		margin: 40.5px auto 0
+
+		@media (max-width: 1200px)
+			margin-top: 31px
+
+		@media (max-width: 576px)
+			margin-top: 30px
+
+	.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled
+		opacity: 0
+
+	.swiper-button-next, .swiper-button-prev
+		width: 50px
+		height: 50px
+		background-color: $accent
+		box-shadow: 0px 5px 15px rgba(139, 154, 173, 0.15)
+		border-radius: 4px
+		top: 41%
+		transition: background-color .2s ease-in-out
+
+		@media (max-width: 992px)
+			top: 28%
+
+		@media (max-width: 576px)
+			width: 44px
+			height: 44px
+			top: 30%
+
+		&:hover
+			background-color: #d12323
+
+		&::after
+			display: none
+
+	.swiper-button-next
+		right: 0
+
+	.swiper-button-prev
+		left: 0
+
+	.swiper-slide
+		margin-right: 10.2px
+
+		@media (max-width: 1200px)
+			margin-right: 10px
+
+		&:last-child
+			margin-right: 0
+
+	&__more
+		margin: 8px auto 32px
+
+		@media (max-width: 1200px)
+			margin: 6.5px auto 24px
+
+		@media (max-width: 992px)
+			margin-top: 11px
+			margin-bottom: 20px
+
+		@media (max-width: 576px)
+			margin-bottom: 10px
+			margin-top: 20px

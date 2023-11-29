@@ -1,0 +1,382 @@
+.map
+	padding-bottom: 100px
+
+	@media (max-width: 1200px)
+		padding-bottom: 80px
+
+	@media (max-width: 576px)
+		padding: 0
+
+	&__container
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+		@media (max-width: 576px)
+			padding: 0
+
+	&__wrap
+		width: 100%
+
+	&__label
+		&-sign
+			padding: 5px 10px
+			background-color: $white
+			box-shadow: 0px 5px 15px rgba(139, 154, 173, 0.15)
+			border-radius: 4px
+			font-family: $pt-font
+			font-size: 14px
+			color: $txt
+			letter-spacing: normal
+			display: flex
+			align-items: center
+			top: 10px
+			position: absolute
+			top: -42px
+			width: max-content
+
+			@media (max-width: 576px)
+				display: none
+
+			&.active
+				background-color: $accent
+				color: $white
+
+				.map__label-sum
+					background-color: $white
+					color: $txt
+					font-weight: 500
+
+		&-sum
+			background-color: $txt
+			width: 24px
+			height: 24px
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 50%
+			color: $white
+			font-size: 12px
+			margin-right: 6px
+
+	.customControl
+		display: none
+		background-color: $white
+		width: 340px
+		position: relative
+
+		@media (max-width: 576px)
+			top: 75px!important
+			left: 0
+			right: 0
+			margin: 0 auto
+			width: calc(100% - 20px)
+			max-width: 340px
+
+	.closeButton
+		padding: 3px
+		cursor: pointer
+		position: absolute
+		left: -50px
+		width: 40px
+		height: 40px
+		background-color: $white
+		box-shadow: 0px 5px 15px rgba(139, 154, 173, 0.15)
+		border-radius: 50%
+		display: flex
+		align-items: center
+		justify-content: center
+
+		@media (max-width: 576px)
+			left: auto
+			right: 0
+			top: -45px
+
+		&-icon
+			stroke: #6D7278
+			transition: stroke .2s ease-in-out
+
+		&:hover
+			.closeButton-icon
+				stroke: $txt
+
+	.content
+		width: 100%
+
+		&__inner
+			width: 100%
+			height: 255px
+			border-radius: 4px 4px 0 0
+			display: flex
+			align-items: flex-end
+
+		&__liked
+			position: absolute
+			right: 9px
+			top: 14px
+
+		&__top
+			color: $white
+			padding: 16.5px 15px
+
+		&__name
+			font-size: 24px
+			margin-bottom: 3px
+			margin-right: 15px
+
+		&__prices
+			display: flex
+			align-items: flex-end
+			flex-wrap: wrap
+			margin-bottom: -8px
+			margin-top: -1px
+
+		&__price
+			font-size: 16px
+			display: block
+			margin-bottom: 9px
+
+			&.none
+				display: none
+
+			&_old
+				text-decoration: line-through
+				margin-right: 10px
+				margin-bottom: 11px
+				margin-top: 8px
+
+			&_big
+				font-size: 26px
+
+		&__distance
+			font-family: $pt-font
+			font-size: 16px
+			margin-top: 6px
+			width: 100%
+			display: block
+
+		&__bottom
+			padding: 22px 20px 20px
+
+		&__quantity
+			font-family: $pt-font
+			font-size: 16px
+			margin-bottom: 22px
+			display: block
+
+			b
+				font-weight: 500
+
+		&__more
+			width: 100%
+
+			@media (max-width: 576px)
+				min-height: 54px
+
+	.ymaps-2-1-79-image-with-content
+		transition: background-image .2s ease-in-out
+
+	.ymaps-2-1-79-controls__control_toolbar
+		@media (max-width: 576px)
+			width: 100%
+			position: absolute!important
+			left: 0
+			right: 0
+
+	&__tabs
+		width: calc(100% - 200px)
+
+		@media (max-width: 1200px)
+			margin-top: 1px
+
+	.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled
+		opacity: 0
+
+	.swiper-button-next, .swiper-button-prev
+		width: 50px
+		height: 50px
+		background-color: $accent
+		box-shadow: 0px 5px 15px rgba(139, 154, 173, 0.15)
+		border-radius: 4px
+		top: 47%
+		transition: background-color .2s ease-in-out
+
+		@media (max-width: 576px)
+			width: 44px
+			height: 44px
+			top: 50%
+
+		&:hover
+			background-color: #d12323
+
+		&::after
+			display: none
+
+	.swiper-button-next
+		right: 0
+
+	.swiper-button-prev
+		left: 0
+
+	.swiper-slide
+		margin-right: 9.8px
+
+		&:last-child
+			margin-right: 0
+
+	.swiper
+		padding-top: 39px
+		padding-bottom: 39.5px
+
+		@media (max-width: 1200px)
+			padding-bottom: 29px
+			padding-top: 28.5px
+
+		@media (max-width: 992px)
+			padding-bottom: 30px
+			padding-top: 29.5px
+
+		@media (max-width: 576px)
+			padding-bottom: 30px
+
+	&__as-list
+		width: 156px
+		height: 49.5px
+		border: 2px solid $accent
+		border-radius: 4px
+		display: flex
+		align-items: center
+		justify-content: center
+		text-decoration: none
+		font-family: $pt-font
+		font-weight: 500
+		font-size: 16px
+		color: $txt
+		margin-top: 39px
+		background-color: $white
+		transition: background-color .2s ease-in-out, color .2s ease-in-out
+		box-sizing: border-box
+
+		@media (max-width: 1200px)
+			margin-top: 30px
+
+		@media (max-width: 576px)
+			display: none
+
+		&:hover
+			background-color: $accent
+			color: $white
+
+			.map__as-list-icon
+				stroke: $white
+
+		&-icon
+			margin-right: 12px
+			stroke: $txt
+			transition: stroke .2s ease-in-out
+
+	&__buttons
+		display: none
+		@media (max-width: 576px)
+			position: fixed
+			bottom: 10px
+			display: flex
+			justify-content: space-between
+			padding-left: 10px
+			padding-right: 10px
+			box-sizing: border-box
+			width: 100%
+
+	&__button
+		&-filter
+			@media (max-width: 576px)
+				width: calc(50% - 5px)
+				text-transform: none
+				font-size: 16px
+
+			&-icon
+				fill: $white
+				stroke: $white
+
+			&-txt
+				@media (max-width: 576px)
+					margin-left: 10px
+
+		&-list
+			@media (max-width: 576px)
+				display: flex
+				width: calc(50% - 5px)
+				margin: 0
+				height: 50px
+
+	&__filter
+		display: none
+
+		&.show
+			display: none
+
+			@media (max-width: 576px)
+				display: block
+
+		@media (max-width: 576px)
+			display: none
+			width: 100%
+			height: 100%
+			background-color: $white
+			z-index: 1000
+			position: fixed
+			top: 0
+			right: 0
+			left: 0
+			bottom: 0
+			overflow: hidden
+
+		&-header
+			height: 56px
+			width: 100%
+			box-shadow: 0px 5px 15px rgba(139, 154, 173, 0.15)
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding: 0 14px 0 20px
+			box-sizing: border-box
+
+		&-title
+			font-family: $pt-font
+			font-weight: 500
+			font-size: 16px
+			display: flex
+			align-items: center
+
+			&-icon
+				margin-right: 12px
+
+		&-close
+			margin-top: 3px
+
+			&-icon
+				stroke: #D6D6D6
+				transition: stroke .2s ease-in-out
+
+			&:hover
+				.map__filter-close-icon
+					stroke: $txt
+
+		&-tabs
+			padding: 30px 10px
+			margin-right: -6px
+
+			.tab
+				margin-right: 6px
+				margin-bottom: 10px
+
+		&-button-show
+			@media (max-width: 576px)
+				margin-left: 10px
+				margin-right: 10px
+				width: calc(100% - 20px)
+				text-transform: none
+				font-size: 16px
+				position: absolute
+				bottom: 10px
+				max-width: 100%

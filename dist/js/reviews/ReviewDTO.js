@@ -1,0 +1,1 @@
+"use strict";class ReviewDTO{constructor(t,s,i,e,h){this.id=t,this.image=s,this.name=i,this.text=e,this.townshipId=h}}

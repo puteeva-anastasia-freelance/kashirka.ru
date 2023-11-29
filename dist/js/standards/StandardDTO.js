@@ -1,0 +1,1 @@
+"use strict";class StandardDTO{constructor(t,s,i,h,a){this.id=t,this.image=s,this.subtitle=i,this.text=h,this.townshipId=a}}

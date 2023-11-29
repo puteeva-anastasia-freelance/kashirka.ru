@@ -1,0 +1,1 @@
+"use strict";class InfrastructureDTO{constructor(t,s,i,c,h,e){this.id=t,this.type=s,this.image=i,this.place=c,this.distance=h,this.townshipId=e}}

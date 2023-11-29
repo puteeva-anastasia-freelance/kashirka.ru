@@ -1,0 +1,1 @@
+"use strict";class PlotDTO{constructor(i,s,t,h,e,r,c,a,l){this.id=i,this.area=s,this.priceOld=t,this.price=h,this.labels=e,this.image=r,this.numberOnPlan=c,this.description=a,this.townshipId=l}}

@@ -1,0 +1,11 @@
+!function(){"use strict";class a{constructor(){this.wrapEl=document.querySelector(".standard .swiper-wrapper"),this.innerEl=document.querySelector(".standard__inner"),this.standardEl=document.querySelector(".standard"),this.pathToTownshipsStandardImages="assets/img/dist/townships/standard",this.settings={loop:!0,speed:700,navigation:{nextEl:".standard-swiper-button-next",prevEl:".standard-swiper-button-prev"},breakpoints:{320:{slidesPerView:1,spaceBetween:10},577:{slidesPerView:2,spaceBetween:20},993:{slidesPerView:2,spaceBetween:24},1201:{slidesPerView:3,spaceBetween:32}}}}insertCardsIntoPage(e,t,s){let a="";var d=`<iframe width="100%" height="500"
+			title="${e.name}" frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen="" class="standard__video-iframe"></iframe>`;for(let e=0;e<s.length;e++)s[e].townshipId==t&&(a+=this.getCardsMarkup(s[e]));this.wrapEl.insertAdjacentHTML("beforeend",a),this.innerEl.insertAdjacentHTML("beforeend",d),this.addSliderStandard(),this.setSameHeightPhoto(),this.addScrollWindow(e),window.addEventListener("resize",()=>{this.setSameHeightPhoto()})}addScrollWindow(s){let a=document.querySelector(".standard__video-iframe");window.addEventListener("scroll",()=>{var e=this.standardEl.getBoundingClientRect(),t=window.innerHeight;e.top<=t&&""==a.src&&(a.src=""+s.video)})}setSameHeightPhoto(){var e=document.querySelectorAll(".standard__photo");let t=document.querySelector("#standard-slider .swiper-slide").clientWidth;e.forEach(e=>{e.style.height=.764*t+"px"})}getCardsMarkup(e){return`
+			<div class="swiper-slide">
+					<div class="standard__item">
+						<img src="${this.pathToTownshipsStandardImages}/${e.image}" alt="${e.subtitle}" class="standard__photo" width="424" height="324">
+						<h2 class="standard__subtitle">${e.subtitle}</h2>
+						<p class="standard__txt">${e.text}</p>
+					</div>
+				</div>`}addSliderStandard(){new Swiper("#standard-slider",this.settings)}}window.addEventListener("load",()=>{var e=new a;let t=location.hash.replace(/#/,"");var s=townships.findIndex(e=>e.id==t);e.insertCardsIntoPage(townships[s],t,standards)})}();

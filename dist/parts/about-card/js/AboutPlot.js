@@ -1,0 +1,1 @@
+!function(){"use strict";class n{constructor(){this.wrapEl=document.querySelector(".about-card__wrap")}insertTextIntoPage(t){t=`<p class="txt about-card__txt">${t.description}</p>`;this.wrapEl.insertAdjacentHTML("beforeend",t)}}window.addEventListener("load",()=>{var t=new n;let e=location.hash.replace(/#/,"");var a=plots.findIndex(t=>t.id==e);t.insertTextIntoPage(plots[a])})}();

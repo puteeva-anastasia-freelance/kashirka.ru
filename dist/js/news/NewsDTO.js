@@ -1,0 +1,1 @@
+"use strict";class NewsDTO{constructor(i,t,s,h,e,c,o,r){this.id=i,this.title=t,this.shortDescription=s,this.date=h,this.image=e,this.imageMiddle=c,this.townshipId=o,this.fullDescription=r}}

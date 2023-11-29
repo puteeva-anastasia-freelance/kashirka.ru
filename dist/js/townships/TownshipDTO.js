@@ -1,0 +1,1 @@
+"use strict";class TownshipDTO{constructor(i,s,t,h,a,e,n,d,o,c,l,m,p,r,g,M){this.id=i,this.name=s,this.distance=t,this.labels=h,this.image=a,this.imageMiddle=e,this.communications=n,this.images=d,this.imagesMiddle=o,this.description=c,this.video=l,this.onMap=m,this.panorama=p,this.plan=r,this.planMiddle=g,this.coordinates=M}}

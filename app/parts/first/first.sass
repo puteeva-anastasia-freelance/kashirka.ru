@@ -1,0 +1,110 @@
+.first
+	background-color: #EFEFEF
+	display: flex
+	position: relative
+
+	@media (max-width: 576px)
+		background-image: url(../assets/img/dist/bg-first-small.webp)
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+
+	&__right, &__left
+		width: 50%
+
+	&__left
+		padding-top: 8.75%
+		padding-left: 32px
+		padding-bottom: 13.96%
+		box-sizing: border-box
+
+		@media (max-width: 1200px)
+			padding-top: 15.4%
+			padding-bottom: 22.85%
+
+		@media (max-width: 992px)
+			width: 560px
+			padding-left: 14px
+			padding-top: 23.6%
+			padding-bottom: 28.65%
+
+		@media (max-width: 576px)
+			padding-left: 10px
+			padding-right: 10px
+			padding-top: 114px
+			padding-bottom: 154px
+			width: 100%
+
+		&-wrap
+			max-width: 668px
+			margin-left: auto
+
+	&__txt
+		font-size: 24px
+		display: block
+		margin-top: 27px
+		margin-bottom: 47.5px
+
+		@media (max-width: 1200px)
+			font-size: 20px
+			margin-top: 17px
+			margin-bottom: 39.5px
+
+		@media (max-width: 992px)
+			margin-top: 19px
+			margin-bottom: 28px
+
+		@media (max-width: 576px)
+			color: $white
+			margin-bottom: 38px
+			margin-top: 17px
+
+	&__right
+		background-image: url(../assets/img/dist/bg-first.webp)
+		height: auto
+		border-radius: 4px 0px 0px 4px
+		background-size: cover
+		background-repeat: no-repeat
+
+		@media (max-width: 1200px)
+			background-size: 200%
+			background-position: 0 -8px
+			border-radius: 0
+
+		@media (max-width: 992px)
+			background-size: cover
+			background-position: left
+
+		@media (max-width: 576px)
+			display: none
+
+	&__down
+		position: absolute
+		bottom: -2px
+		left: 0
+		right: 0
+		margin: 0 auto
+		width: 98px
+		height: 40px
+		padding: 0
+
+		@media (max-height: 940px)
+			position: fixed
+
+		&.position-absolute
+			position: absolute
+
+		&:hover
+			.first__down-icon_stroke
+				stroke: $accent
+
+		&-icon
+			fill: transparent
+
+			&_stroke
+				stroke: $txt
+				transition: stroke .2s ease-in-out
+
+	&__button
+		@media (max-width: 576px)
+			max-width: 100%

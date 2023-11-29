@@ -1,0 +1,149 @@
+.about-company
+	padding-top: 94px
+	padding-bottom: 84px
+
+	@media (max-width: 1200px)
+		padding-top: 75px
+		padding-bottom: 81px
+
+	@media (max-width: 992px)
+		padding-top: 74px
+
+	@media (max-width: 576px)
+		padding-top: 56px
+		padding-bottom: 59px
+
+	&__container
+		display: flex
+		flex-wrap: wrap
+
+	&__title
+		margin-bottom: 39px
+		width: 100%
+
+		@media (max-width: 1200px)
+			margin-bottom: 29px
+
+	&__left
+		width: calc(68.26% - 32px)
+		margin-right: 32px
+
+		@media (max-width: 1200px)
+			width: 100%
+			margin-right: 0
+
+	&__right
+		width: 31.74%
+
+		@media (max-width: 1200px)
+			width: 100%
+
+	&__img
+		display: block
+		border-radius: 4px
+		width: 100%
+		height: auto
+		min-height: 500px
+		object-fit: cover
+		object-position: 0 0
+
+		@media (max-width: 1200px)
+			min-height: auto
+			max-height: 500px
+
+		@media (max-width: 992px)
+			max-height: 380px
+			object-position: 0 top
+
+	&__txt
+		margin-top: 41px
+
+		@media (max-width: 1200px)
+			margin-top: 31px
+			margin-bottom: 60px
+
+		@media (max-width: 992px)
+			line-height: 171%
+			margin-bottom: 58px
+
+		@media (max-width: 576px)
+			font-size: 16px
+			margin-top: 28px
+			margin-bottom: 39px
+			line-height: 169%
+
+	&__offer
+		@media (max-width: 1200px)
+			margin-bottom: 0
+
+		@media (max-width: 992px)
+			padding: 0
+
+		&-left
+			width: 100%
+			padding-left: 30px
+			padding-right: 30px
+			padding-top: 60px
+			padding-bottom: 61px
+
+			@media (max-width: 1200px)
+				padding-top: 41px
+				padding-bottom: 27px
+
+			@media (max-width: 992px)
+				padding-bottom: 40.5px
+
+			@media (max-width: 576px)
+				padding-left: 15px
+				padding-right: 15px
+
+		&::after
+			left: 30px
+
+			@media (max-width: 576px)
+				left: 15px
+
+		&-title
+			margin-bottom: 30px
+
+			@media (max-width: 992px)
+				display: block
+
+		&-form
+			@media (max-width: 1200px)
+				max-width: 100%
+				display: flex
+
+			@media (max-width: 992px)
+				flex-wrap: wrap
+				width: 100%
+
+		&-input
+			@media (max-width: 1200px)
+				width: calc(50% - 12px)
+				padding-left: 25px
+
+			@media (max-width: 992px)
+				width: calc(50% - 10px)
+
+			@media (max-width: 576px)
+				width: 100%
+				padding-left: 20px
+
+	&__policy
+		@media (max-width: 992px)
+			margin-top: 21px
+
+		@media (max-width: 576px)
+			margin-top: 16px
+
+		&-label
+			&:before
+				@media (max-width: 1200px)
+					top: 5px
+
+				@media (max-width: 992px)
+					top: -2px
+
+				@media (max-width: 576px)
+					top: 4px
